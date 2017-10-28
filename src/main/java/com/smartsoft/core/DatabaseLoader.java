@@ -40,7 +40,8 @@ public class DatabaseLoader implements ApplicationRunner{//we want to create cou
                 "Java 9",
                 "Groovy",
                 "Scala",
-                "Hibernate"
+                "Hibernate",
+                "Hello word"
         };
 
         List<Course> courseList = new ArrayList<>();
