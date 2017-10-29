@@ -28,7 +28,7 @@ public class DatabaseLoader implements ApplicationRunner{//we want to create cou
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        Course course = new Course("Java Basics","https://teamtreehouse.com/library/entities-and-repositories-review");
+        Course course = new Course("Java Basics","https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods");
         course.addReview(new Review(3, "You are a dork!!!"));
         courses.save(course);
 
