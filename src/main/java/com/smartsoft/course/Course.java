@@ -4,11 +4,15 @@ import com.smartsoft.core.BaseEntity;
 import com.smartsoft.review.Review;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 public class Course extends BaseEntity {
+    @NotNull
+    @Size(min = 2, max = 140)
     private String title;
     private String url;
 
