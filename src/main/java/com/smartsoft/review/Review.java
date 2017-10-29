@@ -2,6 +2,7 @@ package com.smartsoft.review;
 
 import com.smartsoft.core.BaseEntity;
 import com.smartsoft.course.Course;
+import com.smartsoft.user.User;
 
 import javax.persistence.*;
 
@@ -11,6 +12,8 @@ public class Review extends BaseEntity{
     private String description;
     @ManyToOne
     private Course course;
+    @ManyToOne
+    private User reviewer;
 
     //TODO: duplicating code here for every single entity
     protected Review() {
@@ -20,6 +23,14 @@ public class Review extends BaseEntity{
     public Review(int rating, String description) {
         this.rating = rating;
         this.description = description;
+    }
+
+    public User getReviewer() {
+        return reviewer;
+    }
+
+    public void setReviewer(User reviewer) {
+        this.reviewer = reviewer;
     }
 
     public Course getCourse() {
